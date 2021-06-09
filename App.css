@@ -1,0 +1,251 @@
+html {
+  background-color: #041841;
+}
+
+.englobadora{
+  text-decoration: none;
+  text-align: center;
+  color: chartreuse;
+  font-size: 40px;
+}
+
+.figura img{
+  border-radius: 200px;
+  height: 250px;
+}
+
+.detalhar img{
+  border-radius: 200px;
+  border-style:dotted ;
+  height: 350px;
+  width: 350px;
+}
+
+.detalhar-info{
+  background-color: blue;
+  border-radius: 500px;
+  border-style: dotted;
+  padding: 20px;
+  height: 200px;
+  width: 200px;
+  text-align: center;
+}
+
+.detalhar-mid-middle{
+  margin: 50px;
+}
+h2{
+  font-size: 30px;
+  text-size-adjust: auto;
+}
+span{
+  font-size: 25px;
+  
+}
+a{
+  text-decoration: none;
+}
+
+.personagem-categoria{
+  margin-bottom: 15pt;
+}
+
+.detalhar{
+  display: flex;
+  align-items: center;
+  margin-bottom: 15pt;
+  margin-top: 200pt;
+  margin-left: 15pt;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-evenly;
+  padding: auto;
+}
+
+.detalhar-middle{
+  display: flex;
+    font-size: 20pt;
+    color: aqua;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    height: 306px;
+    padding-right: 0px;
+    padding-bottom: 20px;
+    margin-top: 10px;
+}
+
+.coluna {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.detalhar-bottom{
+  display: flex;
+}
+
+.voltar{
+  background-color: rgb(75, 236, 241);
+  padding: 50px;
+  border-radius: 500px;
+  font-size: 30px;
+  margin-top: 30pt;
+  display: flex;
+}
+.figuraeinfo {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    padding-right: 15px;
+    background-color: rgb(5, 5, 22);
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 100px;
+    margin: 10px;
+    width: 500px;
+
+}
+
+.listadePersonagens{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  color: #282c34;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 10px 0;
+  margin: 10px;
+  transition: 0.5s;
+}
+
+.card:hover{
+  opacity: 0.9;
+  cursor: pointer;
+  margin-top: -2px
+}
+
+.card img {
+  width: 100%;
+}
+
+.card-info {
+  margin: 0 10px;
+  
+}
+
+.card-id {
+text-align: left;
+margin: 0;
+color: gray;
+letter-spacing: 0.2em;
+font-size: 1em;
+}
+
+.card h5{
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.card-category{
+  background-color: teal;
+  color: #ffffff;
+  border-radius: 3px;
+  margin: 0 3% 0 0;
+  line-height: 1.5em;
+  width: 30%;
+  font-size: 0.7em;
+  text-align: center;
+
+}
+.card-categories {
+  display: flex;
+  justify-content: center;
+}
+
+.info {
+  background-color: #7fff00;
+  padding: 0 10px;
+  border-radius: 50px;
+  max-width: min-content;
+  max-height: min-content;
+  width: 200px;
+  font-size: 1vmax;
+}
+.info .info-header {
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  border-bottom: 1px solid silver;
+  padding: 10px;
+
+}
+.info .info-body {
+display: flex;
+flex-wrap: wrap;
+align-items: flex-start;
+
+}
+
+.info .info-block {
+  width: 50%;
+}
+
+.info .info-block img {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 300 px;
+}
+
+.info .info-block .info-category {
+  margin: 10px 0;
+
+}
+
+.info .info-block .info-category .type {
+  background-color: teal;
+  color: #ffffff;
+  border-radius: 3px;
+  padding: 10px 30px;
+  margin: 0 3% 0 0;
+  text-align: center;
+  display: inline-block;
+}
+
+.info .info-footer {
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  padding: 20px;
+  border-top: 1px solid silver;
+}
+
+.info .info-footer a{
+  text-decoration: none;
+  background-color: lightskyblue;
+  padding: 10px 30px;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 1em;
+}
