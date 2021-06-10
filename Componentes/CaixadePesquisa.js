@@ -7,7 +7,7 @@ class CaixadePesquisa extends React.Component {
                 <input type='text'
                 className='caixa-de-pesquisa__input' 
                 placeholder={this.props.placeholder}
-                onSubmit={this.props.funcaoPesquisar}/>
+                onKeyPress={this.props.funcaoPesquisar} />
             </div>
 
         )

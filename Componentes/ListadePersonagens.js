@@ -1,6 +1,6 @@
 import React from 'react'
 import Personagem from './Personagem.js'
-import CaixadePesquisa from '/CaixadePesquisa.js';
+import CaixadePesquisa from './CaixadePesquisa.js';
 
 class ListadePersonagens extends React.Component {
     constructor(props) {
@@ -11,31 +11,6 @@ class ListadePersonagens extends React.Component {
         };
     }
 
-    /*
-    listarPersonagens() {
-        const novosPersonagens = [
-            {
-                'id': 1,
-                'name': 'Ricky Sanchez',
-                'image': 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
-                'status': 'Alive',
-                'species': 'Human'
-            },
-            {
-                'id': 2,
-                'name': 'Morty Smith',
-                'image': 'https://rickandmortyapi.com/api/character/avatar/2.jpeg',
-                'status': 'Alive',
-                'species': 'Human'
-            }
-        ];
-
-        this.setState({
-            personagens: novosPersonagens
-        });
-
-    } */
-
 
     criarQuadroPersonagens() {
         return this.state.personagens.map((personagem) => {
@@ -43,6 +18,28 @@ class ListadePersonagens extends React.Component {
         });
     }
 
+    pesquisarPersonagens(evento) {
+        console.log(evento) 
+        if (evento.key ==="Enter"){
+        const personagemBuscado = evento.target.value
+       
+        fetch(`https://rickandmortyapi.com/api/character/?name=${personagemBuscado}`)
+                .then(resultado => resultado.json())
+                .then(resultadoJson => {
+                    if (resultadoJson.results) {
+                    this.setState({
+                        isLoaded: true,
+                        personagens: resultadoJson.results
+                    })
+                } else{
+
+                    alert('não encontrado')
+                }
+                })
+        
+            }
+
+    }
 
     render() {
         const isLoaded = this.state.isLoaded;
@@ -58,11 +55,12 @@ class ListadePersonagens extends React.Component {
                 <div className='englobadora'>
                     <div className="titulo">
                         <h1>Mick and Rorty</h1>
-                       
+                       <CaixadePesquisa placeholder=' Digite o nome e pressione Enter' 
+                       funcaoPesquisar={(evento) => this.pesquisarPersonagens(evento)} />
                     </div>
                     <div className='listadePersonagens'>
                     {this.criarQuadroPersonagens()}
-                    </div>
+                     </div> 
                         <button onClick={() => this.criarQuadroPersonagens()}>
                             More Tyngs
                          </button>
