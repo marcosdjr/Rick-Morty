@@ -25,18 +25,18 @@ class Personagem extends React.Component {
             const imageSrc = `https://rickandmortyapi.com/api/character/avatar/${personagem.id}.jpeg`
             return (
                 <Link to={`/personagem/${personagem.id}`}>
-                    <section className='figuraeinfo'>
-                        <div className='figura'>
+                    <section className='lista__personagens__figuraeinfo'>
+                        <div className='lista__personagens__figuraeinfo__figura'>
                             <img src={imageSrc} alt={personagem.name} />
                         </div>
-                        <div className='info'>
+                        <div className='lista__personagens__figuraeinfo__info'>
                             <h2>{personagem.name}</h2>
-                            <div className='personagem-categorias'>
-                                <div className='personagem-categoria'>
+                            <div className='lista__personagens__figuraeinfo__info__categorias'>
+                                <div className='lista__personagens__figuraeinfo__info__categorias__categoria'>
                                     <span>Status: {personagem.status}</span>
                                 </div>
 
-                                <div className='personagem-categoria'>
+                                <div className='lista__personagens__figuraeinfo__info__categorias__categoria'>
                                     <span>Species: {personagem.species}</span>
                                 </div>
                             </div>

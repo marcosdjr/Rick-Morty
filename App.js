@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import ListadePersonagens from './Componentes/ListadePersonagens';
 import Detalhar from './Componentes/Detalhar'

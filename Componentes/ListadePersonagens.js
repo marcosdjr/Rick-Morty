@@ -18,8 +18,7 @@ class ListadePersonagens extends React.Component {
         });
     }
 
-    pesquisarPersonagens(evento) {
-        console.log(evento) 
+    pesquisarPersonagens(evento) { 
         if (evento.key ==="Enter"){
         const personagemBuscado = evento.target.value
        
@@ -33,7 +32,7 @@ class ListadePersonagens extends React.Component {
                     })
                 } else{
 
-                    alert('não encontrado')
+                    alert('Não encontrado neste universo...')
                 }
                 })
         
@@ -52,16 +51,16 @@ class ListadePersonagens extends React.Component {
             )
         } else {
             return (
-                <div className='englobadora'>
-                    <div className="titulo">
+                <div className='lista'>
+                    <div className="lista__titulo">
                         <h1>Mick and Rorty</h1>
-                       <CaixadePesquisa placeholder=' Digite o nome e pressione Enter' 
+                       <CaixadePesquisa placeholder='Quem procuras? (Nome + Enter)' 
                        funcaoPesquisar={(evento) => this.pesquisarPersonagens(evento)} />
                     </div>
-                    <div className='listadePersonagens'>
+                    <div className='lista__personagens'>
                     {this.criarQuadroPersonagens()}
                      </div> 
-                        <button onClick={() => this.criarQuadroPersonagens()}>
+                        <button className='lista__personagens__botaoMoreTyngs' onClick={() => this.criarQuadroPersonagens()}>
                             More Tyngs
                          </button>
                     

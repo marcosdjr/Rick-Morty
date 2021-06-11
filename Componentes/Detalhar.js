@@ -29,23 +29,24 @@ class Detalhar extends React.Component {
             return (
                 <div className='detalhar' >
 
-                    <div className='detalhar-middle'>
-                        <section className='coluna'>
-                            <div className='detalhar-mid-middle'>
+                    <div className='detalhar__middle'>
+                        <section>
+                            <div className='detalhar__middle__mid'>
                                 <img src={imageSrc} alt={personagem.name} />
                             </div>
-                            <div className='detalhar-mid-middle'>
-                                <div className='detalhar-info'>
+                            <div className='detalhar__middle__mid'>
+                                <div className='detalhar__middle__mid__info'>
                                     <p><strong>{personagem.name}</strong></p>
-                                    <p><strong>Status:</strong>{personagem.status}</p>
+                                    <p><strong>Status: </strong>{personagem.status}</p>
                                     <p>Species: {personagem.species}</p>
                                 </div>
                             </div>
                         </section>
 
-                        <div className='detalhar-bottom'>
-
-                            <Link to='/' className='voltar'>Voltar</Link>
+                        <div className='detalhar__middle__bottom'>
+                            <button className='detalhar__middle__bottom__voltar'> 
+                            <Link to='/'>Voltar</Link>
+                            </button>
                         </div>
                     </div>
                 </div>
